@@ -17,7 +17,7 @@ Add the dependency
 
 ```
 dependencies {
-	        implementation 'com.github.linzhiji:teamviewerId:Tag'
+	        implementation 'com.github.linzhiji:teamviewerId:v1.0.1'
 	}
 ```
 
