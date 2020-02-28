@@ -45,7 +45,7 @@ public class TeamViewerHelper {
 
     }
 
-    public String getTeamviewerIDFromContent(Context content){
+    public static String  getTeamviewerIDFromContent(Context content){
         String teamViewerLogFilePath = CardUtils.getTeamViewerLogFilePath(content);
         return getTeamViewerIdFromPath(teamViewerLogFilePath);
     }
@@ -54,7 +54,7 @@ public class TeamViewerHelper {
     /**
      * 从teamViewer日志文件中获取ID
      **/
-    public String getTeamViewerIdFromPath(String logFileDir) {
+    public static String getTeamViewerIdFromPath(String logFileDir) {
         String teamViewerId = null;
         if (!StringUtil.IsEmptyOrNullString(logFileDir)) {
             try {
@@ -84,7 +84,7 @@ public class TeamViewerHelper {
     /**
      * 从对应的文件中获取id
      **/
-    private String getIdFromLogFile(File logFile) {
+    private static String getIdFromLogFile(File logFile) {
         String teamViewerId = null;
         if (!logFile.exists() || logFile.isDirectory()) {
             Log.e(TAG, TAG + "---getIdFromLogFile 提供的日志文件不存在");
@@ -149,7 +149,7 @@ public class TeamViewerHelper {
     /**
      * 采用正则 替换字符串中的HTML标签
      **/
-    private String replaceHTMLTag(String htmlStr) {
+    private static String replaceHTMLTag(String htmlStr) {
         // 过滤script标签
         Pattern scriptPattern = Pattern.compile(REGEX_SCRIPT, Pattern.CASE_INSENSITIVE);
         Matcher scriptMatcher = scriptPattern.matcher(htmlStr);
@@ -173,7 +173,7 @@ public class TeamViewerHelper {
      * 截取ID后面的数字
      * 例如:ID:1448002198 License: 10000 OS:And5.1.1 最终结果：1448002198
      **/
-    private String getNumStr(String originalStr) {
+    private static String getNumStr(String originalStr) {
         Pattern numberPattern = Pattern.compile(REGEX_ONLY_NUMBER, Pattern.CASE_INSENSITIVE);
         Matcher numberMatcher = numberPattern.matcher(originalStr);
         //截取开始的数字 遇到字母后直接结束
