@@ -1,2 +1,2 @@
-include ':teamviewerId'
-rootProject.name='teamviewerId'
+include ':teamviewerid'
+rootProject.name='teamviewerid'
