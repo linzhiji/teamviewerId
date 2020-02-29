@@ -1,1 +1,2 @@
 include ':teamviewerId'
+rootProject.name='teamviewerId'
