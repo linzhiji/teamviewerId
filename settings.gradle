@@ -1,2 +1,1 @@
-include ':app', ':teamviewerId'
-rootProject.name='TeamviewerIdSample'
+include ':teamviewerId'
